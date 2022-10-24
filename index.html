@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Goose</title>
+
+        <!-- bootstrap stylesheet -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous" media="screen">
+
+        <!-- custom stylesheet -->
+        <link rel="stylesheet" href="assets/css/styles.css" media="screen">
+        <script src="https://kit.fontawesome.com/4a024530c5.js"
+            crossorigin="anonymous"></script>
+
+    </head>
+
+
+    <body>
+        <!-- nav bar  -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><i class="fa-solid
+                        fa-feather-pointed"></i>Weather Goose</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page"
+                                href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"
+                                role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"><i class="fa-solid
+                                    fa-chart-simple"></i>
+                                Plots
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item"
+                                        href="visualizations/temperature.html">Temperature</a></li>
+                                <li><a class="dropdown-item"
+                                        href="visualizations/humidity.html">Humidity</a></li>
+                                <li><a class="dropdown-item"
+                                        href="visualizations/cloudiness.html">Cloudiness</a></li>
+                                <li><a class="dropdown-item"
+                                        href="visualizations/wind.html">Wind</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comparison.html"><i
+                                    class="fa-solid fa-cubes-stacked"></i>Compare</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html"><i
+                                    class="fa-solid fa-table"></i>Data</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"
+                                role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false"><i class="fa-solid
+                                    fa-chart-simple"></i>
+                                *In Progress*
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item"
+                                        href="">Climate risk and:</a></li>
+                                <li><a class="dropdown-item"
+                                        href="">Economic exposure by country</a></li>
+                                <li><a class="dropdown-item"
+                                        href="">Physical displacement and cost</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- main -->
+        <main>
+            <div class="container">
+                <section class="row">
+                    <div class="col-md-8">
+                        <article class="content-main">
+                            <h1 class="content-header"><i class="fa-solid
+                                    fa-feather-pointed"></i>About Weather Goose:</h1>
+                            <hr class="content-header-hr"/>
+                            <img src="assets/images/temperature.png" alt=""
+                                id="content-img"/>
+                            <p>
+                                Geographic determinants of weather have major
+                                implications on various societal and animal
+                                behaviors.
+                                For example, some birds like geese migrate south
+                                away from their breeding sites during certain
+                                months to avoid the cold, among other factors.
+                                Inspired by naturally occuring phenomena
+                                such as the classic migration patterns of birds,
+                                the Weather Goose project was created to analyze
+                                several weather patterns based on the distance
+                                from the equator during the winter.
+                            </p>
+                            <p>
+                                In order to accomplish this goal,
+                                <a
+                                    href="https://openweathermap.org/weather-data">OpenWeatherMap
+                                    API</a> was used to aggregate weather
+                                data from 500 cities.
+                                Then, visualizations for temperature, humidity,
+                                wind, and cloud coverage were created to analyze
+                                possible correlation between the metrics for
+                                weather and the distance from the equator using
+                                <a href="https://plotly.com/python/">Plotly</a>
+                                in Jupyter Notebook.
+                            </p>
+                        </article>
+                    </div>
+
+
+                    <!-- start sidebar -->
+                    <div class="col-md-4">
+                        <section id="plotPreview-main">
+                            <div class="plotPreview-content">
+                                <h2 class="plotPreview-header">Visualizations</h2>
+                                <hr/>
+                                    <div id="plotPreview-img">
+                                        <a
+                                            href="visualizations/temperature.html"><img
+                                                src="/assets/images/temperature.png"
+                                                alt="Temperature"
+                                                class="plotPreview-photo"></a>
+                                        <a href="visualizations/humidity.html"><img
+                                                src="/assets/images/humidity.png"
+                                                alt="Humidity"
+                                                class="plotPreview-photo"></a>
+                                        <a href="visualizations/wind.html"><img
+                                                src="/assets/images/wind.png"
+                                                alt="Wind"
+                                                class="plotPreview-photo"></a>
+                                        <a
+                                            href="visualizations/cloudiness.html"><img
+                                                src="/assets/images/cloudiness.png"
+                                                alt="Cloudiness"
+                                                class="plotPreview-photo"></a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <!-- end plot quickacess sidebar -->
+                    </section>
+                </div>
+            </main>
+            <!-- end main -->
+
+
+            <!-- footer -->
+            <footer>
+                <div class="footer"></div>
+                <br>
+                <br>
+                <p class="text-center">
+                    <a class="footer-links" href="">GitHub</a>
+                    <a class="footer-links" href="">LinkedIn</a>
+                </p>
+            </footer>
+            <!-- end footer -->
+
+            <!-- jsDelivr CDN -->
+            <script
+                src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+                integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+                crossorigin="anonymous"></script>
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+                integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+                crossorigin="anonymous"></script>
+
+        </body>
+    </html>
